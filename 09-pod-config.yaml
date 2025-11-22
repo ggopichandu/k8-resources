@@ -9,11 +9,11 @@ spec:
     env:
     - name: course
       valueFrom:
-        ConfigMapKeyRef:
+        configMapKeyRef:
           name: daws-78s
           key: course
     - name: trainer
       valueFrom:
-        ConfigMapKeyRef:
+        configMapKeyRef:
           name: daws-78s
           key: trainer        
