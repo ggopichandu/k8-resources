@@ -8,7 +8,7 @@ spec:
     image: nginx
     envFrom:
     - configMapRef:
-      name: daws-78s
+        name: daws-78s
     # env:
     # - name: course
     #   valueFrom:
