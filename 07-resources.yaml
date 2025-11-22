@@ -14,4 +14,4 @@ spec:
     # limits should be atleast or more than requests i.e hard limit
       limits:
         cpu: "100m"
-        memory: "128mi"  
+        memory: "128mi"
