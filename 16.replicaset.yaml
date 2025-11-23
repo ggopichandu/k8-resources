@@ -1,30 +1,3 @@
-apiVersion: apps/v1
-kind: ReplicaSet
-metadata:
-  name: nginx
-  labels:
-    app: nginx
-    tier: frontend
-spec:
- # modify replicas according to our case
-  replicas: 3
-  selector:
-    matchLabels:
-      tier: frontend
-      app: nginx
-  # below is pod definition    
-  template:
-    metadata:
-      labels:
-        tier: frontend   
-        app: nginx
-        project: project-kind
-    spec:
-    containers:
-      - name: nginx
-        image: nginx 
-
-
 # apiVersion: apps/v1
 # kind: ReplicaSet
 # metadata:
@@ -32,22 +5,49 @@ spec:
 #   labels:
 #     app: nginx
 #     tier: frontend
-
 # spec:
+#  # modify replicas according to our case
 #   replicas: 3
 #   selector:
-#     matchLabels:        # FIXED: matchLables → matchLabels
+#     matchLabels:
 #       tier: frontend
 #       app: nginx
-
+#   # below is pod definition    
 #   template:
 #     metadata:
 #       labels:
-#         tier: frontend
+#         tier: frontend   
 #         app: nginx
 #         project: project-kind
-
 #     spec:
-#       containers:       # FIXED: containers should be under spec:
-#         - name: nginx
-#           image: nginx
+#     containers:
+#       - name: nginx
+#         image: nginx 
+
+
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: nginx
+  labels:
+    app: nginx
+    tier: frontend
+
+spec:
+  replicas: 3
+  selector:
+    matchLabels:        # FIXED: matchLables → matchLabels
+      tier: frontend
+      app: nginx
+
+  template:
+    metadata:
+      labels:
+        tier: frontend
+        app: nginx
+        project: project-kind
+
+    spec:
+      containers:       # FIXED: containers should be under spec:
+        - name: nginx
+          image: nginx
