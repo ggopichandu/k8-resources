@@ -1,3 +1,3 @@
 <div align="center">
-  <img src="https://github.com/ggopichandu/ggopichandu/blob/98d3f4bb9c98e9792fbacbf2bcaff6e3c49c3424/banner.png"
+  <img src=https://github.com/ggopichandu/k8-resources/blob/9348b63b4d99fcfb33c52c2818b03dfe6c06e357/cluster.drawio.png
 </div>
