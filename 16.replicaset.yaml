@@ -50,4 +50,4 @@ spec:
     spec:
       containers:       # FIXED: containers should be under spec:
         - name: nginx
-          image: nginx:stable-perl
+          image: nginx:trixie-perl
