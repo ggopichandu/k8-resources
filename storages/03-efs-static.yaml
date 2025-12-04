@@ -46,4 +46,5 @@ spec:
       mountPath: /usr/share/nginx/html
   volumes:
   - name: persistent-storage
-    persistentVolumeClaim: efs-static-claim
+    persistentVolumeClaim:
+      claimName: efs-static-claim
