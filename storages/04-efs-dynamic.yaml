@@ -9,3 +9,39 @@ spec:
   resources:
     requests:
       storage: 5Gi
+---
+
+# Pod
+
+apiVersion: v1
+kind: Pod
+metadata:
+  name: efs-dynamic
+  labels:
+    purpose: efs-dynamic
+spec:
+  containers:
+    - name: app
+      image: nginx
+      volumeMounts:
+        - name: persistent-storage
+          mountPath: /usr/share/nginx/html
+  volumes:
+    - name: persistent-storage
+      persistentVolumeClaim:
+        claimName: efs-dynamic
+---
+# To access this pod from outside we use service is LoadBalancer
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: efs-dynamic 
+spec:
+  selector:
+    purpose: efs-dynamic
+  ports:
+  - protocol: TCP
+    port: 80 # service-port
+    targetPort: 80  # target-port
+        
