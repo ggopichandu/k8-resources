@@ -12,9 +12,9 @@ spec:
             operator: In
             values:
             - expense
-  # containers:
-  # - name: with-node-affinity
-  #   image: nginx
+  containers:
+  - name: with-node-affinity
+    image: nginx
   # tolerations:
   # - key: "project"
   #   operator: "Equal"
