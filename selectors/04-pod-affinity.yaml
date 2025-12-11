@@ -41,7 +41,7 @@ metadata:
   labels:
     name: pod-3
     purpose: affinity
-  spec:
+spec:
   affinity:
     podAntiAffinity:
       requiredDuringSchedulingIgnoredDuringExecution:
