@@ -18,7 +18,7 @@ metadata:
   labels:
     name: pod-1
     purpose: affinity
-  spec:
+spec:
   affinity:
     podAffinity:
       requiredDuringSchedulingIgnoredDuringExecution:
